@@ -1,14 +1,26 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { GlobalStyles } from "./global";
+import SaloonList from "./components/List/SaloonList";
+import Header from "./components/Header";
+import GlobalFonts from "./fonts/fonts";
+import styled from "styled-components";
+import ListFilter from "./components/List/ListFilter";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100%;
+  margin: 10px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hejsan</p>
-      </header>
-    </div>
+    <Container>
+      <GlobalFonts />
+      <Header />
+      <ListFilter />
+      <GlobalStyles />
+      <SaloonList />
+    </Container>
   );
 }
 

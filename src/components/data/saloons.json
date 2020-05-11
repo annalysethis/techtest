@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Sax & Fön",
+    "id": "1",
+    "opening_time": "8:00",
+    "closing_time": "18:00",
+    "price": ["200"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.saxochfön.se",
+    "stars": 4,
+    "time": "30 min"
+  },
+  {
+    "name": "Hårizont",
+    "id": "2",
+    "opening_time": "10:00",
+    "closing_time": "20:00",
+    "price": ["500"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.hårisont.se",
+    "stars": 3,
+    "time": "30 min"
+  },
+  {
+    "name": "Hårhuset",
+    "id": "3",
+    "opening_time": "8:00",
+    "closing_time": "18:00",
+    "price": ["600"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.hårhuset.se",
+    "stars": 4,
+    "time": "30 min"
+  },
+  {
+    "name": "Klippt & Klart",
+    "id": "4",
+    "opening_time": "10:00",
+    "closing_time": "20:00",
+    "price": ["500"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.klipptochklart.se",
+    "stars": 3,
+    "time": "30 min"
+  },
+  {
+    "name": "Hårley Davidson",
+    "id": "5",
+    "opening_time": "8:00",
+    "closing_time": "18:00",
+    "price": ["200"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.hårleydavidson.se",
+    "stars": 4,
+    "time": "30 min"
+  },
+  {
+    "name": "Hårexperten",
+    "id": "6",
+    "opening_time": "10:00",
+    "closing_time": "20:00",
+    "price": ["300"],
+    "address": "Rådmansgatan 46",
+    "zipcode": "113 47 Stockholm",
+    "number": "08-567 832 83",
+    "website": "www.hårexperten.se",
+    "stars": 3,
+    "time": "30 min"
+  }
+]
