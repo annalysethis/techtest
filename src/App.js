@@ -1,26 +1,29 @@
 import React from "react";
 import { GlobalStyles } from "./global";
 import SaloonList from "./components/List/SaloonList";
-import Header from "./components/Header";
 import GlobalFonts from "./fonts/fonts";
 import styled from "styled-components";
-import ListFilter from "./components/List/ListFilter";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SaloonView from "./components/SaloonView/SaloonView";
 
 const Container = styled.div`
   width: 100vw;
   height: 100%;
-  margin: 10px;
 `;
 
 function App() {
   return (
-    <Container>
-      <GlobalFonts />
-      <Header />
-      <ListFilter />
-      <GlobalStyles />
-      <SaloonList />
-    </Container>
+    <Router>
+      <Container>
+        <GlobalStyles />
+        <GlobalFonts />
+        <SaloonList />
+        <Switch>
+          <Route path="/saloonView" exact component={SaloonView} />
+        </Switch>
+      </Container>
+    </Router>
   );
 }
 

@@ -10,7 +10,8 @@
     "number": "08-567 832 83",
     "website": "www.saxochfön.se",
     "stars": 4,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   },
   {
     "name": "Hårizont",
@@ -23,7 +24,8 @@
     "number": "08-567 832 83",
     "website": "www.hårisont.se",
     "stars": 3,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   },
   {
     "name": "Hårhuset",
@@ -36,7 +38,8 @@
     "number": "08-567 832 83",
     "website": "www.hårhuset.se",
     "stars": 4,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   },
   {
     "name": "Klippt & Klart",
@@ -49,7 +52,8 @@
     "number": "08-567 832 83",
     "website": "www.klipptochklart.se",
     "stars": 3,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   },
   {
     "name": "Hårley Davidson",
@@ -62,7 +66,8 @@
     "number": "08-567 832 83",
     "website": "www.hårleydavidson.se",
     "stars": 4,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   },
   {
     "name": "Hårexperten",
@@ -75,6 +80,7 @@
     "number": "08-567 832 83",
     "website": "www.hårexperten.se",
     "stars": 3,
-    "time": "30 min"
+    "time": "30 min",
+    "clock": "12:00"
   }
 ]
