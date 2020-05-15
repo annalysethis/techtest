@@ -56,6 +56,10 @@ export const InfoBox = styled.div`
   width: 50%;
   text-align: center;
   border-bottom: 2px solid #d3b23b;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 15px;
 `;
 
 export const SchemaBox = styled.div`
@@ -64,6 +68,10 @@ export const SchemaBox = styled.div`
   width: 50%;
   left: 50%;
   border-bottom: 2px solid #f4f4f4;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 15px;
 `;
 
 export const UlList = styled.ul`

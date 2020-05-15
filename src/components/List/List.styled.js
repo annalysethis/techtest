@@ -32,6 +32,7 @@ export const SaloonName = styled.h3`
   font-weight: 400;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 `;
 
 export const Clock = styled.p`

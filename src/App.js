@@ -7,11 +7,7 @@ import "./App.css";
 
 const Container = styled.div`
   width: 100vw;
-  /*  height: 100%;
-  align-items: center;
-  display: flex; */
   min-height: 100vh;
-  /*   justify-content: center; */
 `;
 
 function App() {
