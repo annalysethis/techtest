@@ -1,20 +1,50 @@
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
-}
+} */
 
-.star {
+/* .star {
   cursor: pointer;
   transition: color 200ms;
-}
+} */
+
 .fas {
   margin-top: 2px;
-}
-.fa-chevron-left {
-  font-size: 25px;
-  color: #d3b23b;
 }
 
 .fa-wifi {
   margin-top: 2px;
   font-size: 11px;
 }
+
+.select-box--arrow {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background-color: #ffff;
+}
+
+.select-box--arrow-down {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #d3b23b;
+}
+
+.select-box--arrow-up {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #d3b23b;
+}
+
+/* #d3b23b */

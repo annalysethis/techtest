@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Arrow, Arrow2, BackBtn, Container } from "./Nav.styled";
+import {
+  Arrow,
+  Arrow2,
+  BackBtn,
+  Container,
+  FixedContainer,
+  Arrow3,
+  Arrow4,
+} from "./Nav.styled";
 
 const Nav = (props) => {
   return (
@@ -12,4 +20,12 @@ const Nav = (props) => {
   );
 };
 
+export const FloatingNav = (props) => (
+  <FixedContainer>
+    <BackBtn onClick={() => props.selectSaloon()}>
+      <Arrow3> / </Arrow3>
+      <Arrow4> \ </Arrow4>
+    </BackBtn>
+  </FixedContainer>
+);
 export default Nav;

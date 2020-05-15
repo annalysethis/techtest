@@ -1,1 +1,3 @@
-export { default } from "./SaloonView";
+import SaloonView from "./SaloonView";
+
+export default SaloonView;

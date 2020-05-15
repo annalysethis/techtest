@@ -1,19 +1,27 @@
-import { FilterContainer } from "./List.styled";
 import React, { Component } from "react";
 import ListData from "../data/saloons.json";
 import {
-  MainContainer,
+  Container,
   Price,
   Container2,
   Container3,
-  SaloonName,
+  Container4,
   Address,
+  Time,
+  Clock,
+  SaloonName,
+  FilterContainer,
+  MainContainer,
   SelectBtn,
   StyledSelect,
-} from "./List.styled";
-import SelectBox from "./SelectBox";
+} from "../List/List.styled";
+import StarRatings from "../List/StarRatings";
+import Header from "../Header";
+import ListFilter from "../List/ListFilter";
+import SaloonView from "../SaloonView";
+import Nav from "../Navigation/Nav";
 
-class ListFilter extends Component {
+class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = { value: "all" };
@@ -31,7 +39,6 @@ class ListFilter extends Component {
     const emptyMsg = () => {
       return <p>Nothing to show.</p>;
     };
-
     const Saloons = () => {
       return ListData.filter((item) => {
         if (this.state.value === "all") {
@@ -50,15 +57,13 @@ class ListFilter extends Component {
           <MainContainer key={item.id}>
             <Container2>
               <div>
-                <SaloonName>{item.name}</SaloonName>
+                <h3>{item.name}</h3>
               </div>
-
-              <Price>{item.price} kr</Price>
+              <div>
+                <Price>{item.price} kr</Price>
+              </div>
             </Container2>
             <Container3>
-              <div>
-                <p>{item.stars} (30)</p>
-              </div>
               <div>
                 <p>{item.time}</p>
               </div>
@@ -68,39 +73,37 @@ class ListFilter extends Component {
         );
       });
     };
-
     return (
       <div>
-        <FilterContainer>
-          {/* <SelectBox
-            items={[
-              { value: "0-250", id: 1 },
-              { value: "250-500", id: 2 },
-              { value: "500-750", id: 3 },
-              { value: "750+", id: 4 },
-            ]}
-          /> */}
-          {/* <SelectBtn>^</SelectBtn> */}
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Filter:
-              <StyledSelect
-                selectvalue={this.state.value}
-                onChange={this.handleChange}
-              >
-                <option value="all">Alla pris</option>
-                <option value="0-250">Pris 0 - 250</option>
-                <option value="250-500">Pris 250 - 500</option>
-                <option value="500-750">Pris 500 - 750</option>
-                <option value="750+">Pris 750+</option>
-              </StyledSelect>
-            </label>
-            {/* <input type="submit" value="Submit" /> */}
-          </form>
-        </FilterContainer>
-        {/* <Saloons /> */}
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Filter:
+            <select value={this.state.value} onChange={this.handleChange}>
+              <option value="all">Alla pris</option>
+              <option value="0-250">Pris 0 - 250</option>
+              <option value="250-500">Pris 250 - 500</option>
+              <option value="500-750">Pris 500 - 750</option>
+              <option value="750+">Pris 750+</option>
+            </select>
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        <Saloons />
       </div>
     );
   }
 }
-export default ListFilter;
+export default Filter;
+
+// export default Filter;
+
+// export class Filter extends Component {
+//   render() {
+//     const { Listdata, filterText } = this.props;
+
+//     const priceList = data.map((price) => {
+//       return <div key={price.id}></div>;
+//     });
+//     return <div>{priceList}</div>;
+//   }
+// }

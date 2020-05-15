@@ -1,15 +1,44 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
+export const SelectBoxContainer = styled.div`
+  height: 30px;
+`;
+
+export const StyledSelect = styled.select`
+  border: none;
+  outline: none;
+  background: none;
+  content: "";
+`;
+
+export const StarContainer = styled.div`
+  padding: 0;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+`;
 
 export const FilterContainer = styled.div`
+  position: relative;
   border-bottom: 1px solid #d3b23b;
   border-top: 1px solid #d3b23b;
   margin-top: 10px;
   width: 100%;
-  height: 50%;
+  height: 50px;
 `;
 
-export const Container = styled.div`
+export const SelectBtn = styled.button`
+  position: absolute;
+  border: none;
+  transform: rotate(180deg);
+  font-size: 20px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+`;
+
+export const MainContainer = styled.div`
   border-bottom: 1px solid #eee;
   width: 100%;
   padding: 10px;
@@ -34,11 +63,6 @@ export const Container3 = styled.div`
   width: 100%;
 `;
 
-export const PriceBox = styled.div`
-  display: flex;
-  align-self: flex-end;
-`;
-
 export const Clock = styled.p`
   margin-top: 0;
   padding-top: 0;
@@ -51,24 +75,13 @@ export const NumOfVotes = styled.p`
   margin-left: 10px;
   font-size: 13px;
   color: #828282;
-`;
-
-export const Stars = styled.div`
-  padding: 0;
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: row;
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+  font-size: 12px;
+  font-family: sans-serif;
 `;
 
 // ************** JSON FILES *****************
 
-export const Headline = styled.h3`
+export const SaloonName = styled.h3`
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -77,6 +90,8 @@ export const Headline = styled.h3`
 export const Price = styled.p`
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
 `;
 
 export const Address = styled.p`
@@ -87,7 +102,9 @@ export const Address = styled.p`
 
 export const Time = styled.p`
   padding: 0;
-  margin-top: 5px;
+  margin-top: 0;
   margin-bottom: 5px;
   color: #828282;
+  font-size: 14px;
+  font-family: sans-serif;
 `;

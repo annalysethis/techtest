@@ -4,19 +4,15 @@ import {
   Container,
   Price,
   Container2,
-  PriceBox,
   Container3,
   Container4,
-  Headline,
   Address,
-  Stars,
   Time,
   Clock,
-  NumOfVotes,
-  StyledLink,
+  SaloonName,
+  MainContainer,
 } from "./List.styled";
 import StarRatings from "./StarRatings";
-import { Link } from "react-router-dom";
 import Header from "../Header";
 import ListFilter from "./ListFilter";
 import SaloonView from "../SaloonView";
@@ -36,50 +32,43 @@ class SaloonList extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Nav
-          selectSaloon={this.selectSaloon}
-          selectedSaloon={this.state.selectedSaloon}
-        />
+        {!this.state.selectedSaloon ? (
+          <React.Fragment>
+            <Header />
+            <Nav
+              selectSaloon={this.selectSaloon}
+              selectedSaloon={this.state.selectedSaloon}
+            />
+            <ListFilter />
+          </React.Fragment>
+        ) : null}
 
-        <ListFilter />
         {!this.state.selectedSaloon ? (
           ListData.map((listDetail, index) => {
             return (
-              <Container
-                key={index}
-                id={listDetail.id}
-                onClick={() => this.selectSaloon(listDetail.id)}
-              >
+              <MainContainer key={index} id={listDetail.id}>
                 <Container4>
-                  <div>
-                    <Clock>{listDetail.clock}</Clock>
-                  </div>
+                  <Clock>{listDetail.clock}</Clock>
 
                   <Container2>
-                    <div>
-                      <StyledLink to="/SaloonView">
-                        <Headline id={listDetail.id}>
-                          {listDetail.name}
-                        </Headline>
-                      </StyledLink>
-                    </div>
-                    <PriceBox>
-                      <Price>{listDetail.price} kr</Price>
-                    </PriceBox>
+                    <SaloonName
+                      id={listDetail.id}
+                      onClick={() => this.selectSaloon(listDetail.id)}
+                    >
+                      {listDetail.name}
+                    </SaloonName>
+
+                    <Price>{listDetail.price} kr</Price>
                   </Container2>
                 </Container4>
+
                 <Container3>
-                  <Stars>
-                    <StarRatings />
-                    <NumOfVotes>(30)</NumOfVotes>
-                  </Stars>
-                  <div>
-                    <Time>{listDetail.time}</Time>
-                  </div>
+                  <StarRatings />
+                  <Time>{listDetail.time}</Time>
                 </Container3>
+
                 <Address>{listDetail.address}</Address>
-              </Container>
+              </MainContainer>
             );
           })
         ) : (

@@ -19,91 +19,66 @@ import {
 } from "./Header.styled";
 import Equalizer from "../../img/equalizer_gold2.jpg";
 import Nav from "../Navigation/Nav";
-import SaloonView from "../SaloonView";
+import Settings from "../MobileSettings/Settings";
 
-// const Header = (props) => {
-//   return (
-//     <HeaderMenu>
-//       <Container1>
-//         <WifiContainer>
-//           <i className="fas fa-ellipsis-h"></i>
-//           <i className="fas fa-ellipsis-h"></i>
-//           <Sketch>Sketch</Sketch>
-//           <i className="fas fa-wifi"></i>
-//         </WifiContainer>
+const Header = (props) => {
+  return (
+    <HeaderMenu>
+      <Settings />
+      <Headline>Hår</Headline>
+      <EqualizerImg alt="Equalizer" src={Equalizer}></EqualizerImg>
+    </HeaderMenu>
+  );
+};
 
-//         {/* <Container2>
+// export class Header extends Component {
+//   constructor() {
+//     super();
+
+//     this.state = {
+//       selectedSaloon: null,
+//     };
+//   }
+//   selectSaloon = (selectedSaloon = null) => {
+//     this.setState({ selectedSaloon });
+//   };
+//   render() {
+//     return (
+//       <HeaderMenu>
+//         <Container1>
+//           <WifiContainer>
+//             <i className="fas fa-ellipsis-h"></i>
+//             <i className="fas fa-ellipsis-h"></i>
+//             <Sketch>Sketch</Sketch>
+//             <i className="fas fa-wifi"></i>
+//           </WifiContainer>
+//           {/* <Nav
+//             selectSaloon={this.selectSaloon}
+//             selectedSaloon={this.state.selectedSaloon}
+//           /> */}
+//           {/* <Container2>
 //           <BackBtn>
 //             <Arrow> / </Arrow>
 //             <Arrow2> \ </Arrow2>
 //           </BackBtn>
 //         </Container2> */}
-//       </Container1>
-//       <Container5>
-//         <Time>9:41 AM</Time>
-//         <Headline>Hår</Headline>
-//       </Container5>
-//       <Container3>
-//         <Battery>
-//           <Procent>100%</Procent>
-//           <i className="fas fa-battery-full"></i>
-//         </Battery>
-//         <Container4>
-//           <EqualizerImg alt="Equalizer" src={Equalizer}></EqualizerImg>
-//         </Container4>
-//       </Container3>
-//     </HeaderMenu>
-//   );
-// };
-
-export class Header extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      selectedSaloon: null,
-    };
-  }
-  selectSaloon = (selectedSaloon = null) => {
-    this.setState({ selectedSaloon });
-  };
-  render() {
-    return (
-      <HeaderMenu>
-        <Container1>
-          <WifiContainer>
-            <i className="fas fa-ellipsis-h"></i>
-            <i className="fas fa-ellipsis-h"></i>
-            <Sketch>Sketch</Sketch>
-            <i className="fas fa-wifi"></i>
-          </WifiContainer>
-          {/* <Nav
-            selectSaloon={this.selectSaloon}
-            selectedSaloon={this.state.selectedSaloon}
-          /> */}
-          {/* <Container2>
-          <BackBtn>
-            <Arrow> / </Arrow>
-            <Arrow2> \ </Arrow2>
-          </BackBtn>
-        </Container2> */}
-        </Container1>
-        <Container5>
-          <Time>9:41 AM</Time>
-          <Headline>Hår</Headline>
-        </Container5>
-        <Container3>
-          <Battery>
-            <Procent>100%</Procent>
-            <i className="fas fa-battery-full"></i>
-          </Battery>
-          <Container4>
-            <EqualizerImg alt="Equalizer" src={Equalizer}></EqualizerImg>
-          </Container4>
-        </Container3>
-      </HeaderMenu>
-    );
-  }
-}
+//         </Container1>
+//         <Container5>
+//           <Time>9:41 AM</Time>
+//           <Headline>Hår</Headline>
+//         </Container5>
+//         <Container3>
+//           <Battery>
+//             <Procent>100%</Procent>
+//             <i className="fas fa-battery-full"></i>
+//           </Battery>
+//           <Container4>
+//             <EqualizerImg alt="Equalizer" src={Equalizer}></EqualizerImg>
+//           </Container4>
+//         </Container3>
+//       </HeaderMenu>
+//     );
+//   }
+// }
 
 export default Header;

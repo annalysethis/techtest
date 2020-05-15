@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import MillerBanner1 from "./LincolnMillerBannerRomanRoman.ttf";
 import MillerBanner from "./FontBureau-MillerBannerLight.otf";
 
 export default createGlobalStyle`
