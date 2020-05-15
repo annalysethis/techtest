@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ListData from "../data/saloons.json";
 import {
-  Container,
   Price,
   Container2,
   Container3,
@@ -14,9 +13,9 @@ import {
 } from "./List.styled";
 import StarRatings from "./StarRatings";
 import Header from "../Header";
-import ListFilter from "./ListFilter";
 import SaloonView from "../SaloonView";
 import Nav from "../Navigation/Nav";
+import Filter from "../Filter/Filter";
 
 class SaloonList extends Component {
   constructor() {
@@ -28,7 +27,7 @@ class SaloonList extends Component {
   }
   selectSaloon = (selectedSaloon = null) => {
     this.setState({ selectedSaloon });
-  }; // anropa med ett id och id:t sätt. anropa utan argument och selectedSaloon sätts till null
+  };
   render() {
     return (
       <div>
@@ -39,7 +38,7 @@ class SaloonList extends Component {
               selectSaloon={this.selectSaloon}
               selectedSaloon={this.state.selectedSaloon}
             />
-            <ListFilter />
+            <Filter />
           </React.Fragment>
         ) : null}
 
@@ -63,6 +62,11 @@ class SaloonList extends Component {
                 </Container4>
 
                 <Container3>
+                  <i
+                    id={listDetail.id}
+                    onClick={() => this.selectSaloon(listDetail.id)}
+                    className="fas fa-angle-right"
+                  ></i>
                   <StarRatings />
                   <Time>{listDetail.time}</Time>
                 </Container3>

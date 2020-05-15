@@ -6,6 +6,7 @@ export const Container = styled.nav`
   width: 60px;
   height: 5px;
   transform: rotate(90deg);
+  top: 60px;
 `;
 export const FixedContainer = styled.nav`
   position: fixed;

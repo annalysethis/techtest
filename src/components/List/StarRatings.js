@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa";
 import { NumOfVotes, StarContainer } from "./List.styled";
 
@@ -20,38 +20,5 @@ const StarRatings = () => {
     </StarContainer>
   );
 };
-
-//Jag tänkte att stjärnorna inte behövde vara responsiva så gjorde som ovan istället.
-//Denna kod är mer för en web-baserad version med hover:
-
-// const StarRatings = () => {
-//   const [rating, setRating] = useState(null);
-//   const [hover, setHover] = useState(null);
-//   return (
-//     <div>
-//       {[...Array(5)].map((star, i) => {
-//         const ratingValue = i + 1;
-
-//         return (
-//           <label key={i}>
-//             <input
-//               type="radio"
-//               name="rating"
-//               value={ratingValue}
-//               onClick={() => setRating(ratingValue)}
-//             />
-//             <FaStar
-//               className="star"
-//               color={ratingValue <= (hover || rating) ? "#D3B23B" : "#e4e5e9"}
-//               size={14}
-//               onMouseEnter={() => setHover(ratingValue)}
-//               onMouseLeave={() => setHover(null)}
-//             />
-//           </label>
-//         );
-//       })}
-//     </div>
-//   );
-// };
 
 export default StarRatings;

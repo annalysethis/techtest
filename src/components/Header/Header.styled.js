@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderMenu = styled.header`
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 70px;
   display: flex;
   flex-direction: row;
 `;
